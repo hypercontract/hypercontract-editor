@@ -13,6 +13,9 @@
     },
     "hypercontract-editor-e2e": {
       "tags": []
+    },
+    "profile-form": {
+      "tags": []
     }
   }
 }
