@@ -1,0 +1,11 @@
+<form [formGroup]="form" (submit)="onSubmit($event)">
+    <mat-form-field class="prefix">
+        <input type="text" formControlName="prefix" matInput placeholder="Prefix" />
+    </mat-form-field>
+
+    <mat-form-field class="namespace-uri">
+        <input type="url" formControlName="namespaceUri" matInput placeholder="Namespace URI" />
+    </mat-form-field>
+
+    <button type="submit" [disabled]="form.invalid" mat-button color="primary">Add Vocabulary</button>
+</form>

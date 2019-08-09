@@ -1,16 +1,21 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Vocabulary } from '../vocabulary.model';
 
 @Component({
-  selector: 'hyper-profile-form',
-  templateUrl: './profile-form.component.html',
-  styleUrls: ['./profile-form.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'hyper-profile-form',
+    templateUrl: './profile-form.component.html',
+    styleUrls: ['./profile-form.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProfileFormComponent implements OnInit {
+export class ProfileFormComponent {
 
-  constructor() { }
+    vocabularies: Vocabulary[] = [];
 
-  ngOnInit() {
-  }
+    onAddVocabulary(vocabulary: Vocabulary) {
+        this.vocabularies = [
+            ...this.vocabularies,
+            vocabulary
+        ];
+    }
 
 }
